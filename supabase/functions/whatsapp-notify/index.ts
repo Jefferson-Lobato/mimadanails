@@ -12,8 +12,8 @@ serve(async (req) => {
   try {
     const { appointment_id, type } = await req.json();
     const supabase = createClient(
-      Deno.env.get("SUPABASE_URL")!,
-      Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
+      Deno.env.get("https://kbuffaedveflhnrbndzg.supabase.co")!,
+      Deno.env.get("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtidWZmYWVkdmVmbGhucmJuZHpnIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4OTk5NzkyNCwiZXhwIjoyMTA1NTczOTI0fQ.BE5xjMa9AJjs0O5JADeWk59bY9cDL5ejIE8tBXKTniA")!
     );
 
     const { data: a, error } = await supabase
