@@ -136,7 +136,8 @@ async function book(){
   if(error){toast(error.message);await loadSlots();return}
   toast("Agendamento confirmado!");
   await loadMyAppointments();state.selectedTime="";await loadSlots();
-  if(data?.[0]?.id) notifyWhatsApp(data[0].id,"confirmation");
+  if (data?.[0]?.appointment_id) {
+  notifyWhatsApp(data[0].appointment_id, "confirmation");
 }
 async function loadMyAppointments(){
   const {data,error}=await db.from("appointments").select(`*, appointment_services(*, services(nome,duracao_minutos,preco))`).eq("cliente_id",state.user.id).order("data",{ascending:false}).order("hora_inicio",{ascending:false});
