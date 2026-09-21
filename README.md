@@ -66,3 +66,4 @@ Os templates precisam existir/aprovados no WhatsApp Business da Meta.
 
 Este é um projeto base pronto para personalização. Antes de produção, configure domínio, SMTP/Email do Supabase, políticas de cancelamento, templates oficiais do WhatsApp e faça testes de carga/conflito.
 # mimadanails
+# mimadanails
